@@ -13,18 +13,21 @@ class Robot(object):
 		if self.direccion==90 and self.y < 25:
 			self.y +=1
 
-		if self.direccion==180 and self.x < 80:
+		if self.direccion==180 and self.x > 80:
 			self.x -=1
 
-		if self.direccion==270 and self.y < 25:
+		if self.direccion==270 and self.y > 25:
 			self.y -=1
 
-	def rotar(self):
-		self.direccion+=90
-		if self.direccion>360:
-			self.direccion=0
+	def rotate(self):
+		self.direccion-=90
+		if self.direccion<0:
+			self.direccion=270
 
-	def recoger(self):
+	def pick(self):
+		self.fichas+=1
+
+	
 		
 
 
