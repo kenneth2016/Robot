@@ -27,12 +27,22 @@ class Robot(object):
 		self.direccion-=90
 		if self.direccion<0:
 			self.direccion=270
+		if self.direccion == 0:
+			robot=">"
+			return 
+		if self.direccion == 90:
+			robot="^"
+			return robot
+		if self.direccion == 180:
+			robot="<"
+			return robot
+		if self.direccion == 270:
+			robot="v"
+			return robot
+
 
 	def pick(self):
 		self.fichas+=1
-
-	
-		
 
 
 
