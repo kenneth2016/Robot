@@ -5,5 +5,11 @@ class Mapa(object):
 		self.robot=None
 		sel.monedas=[]
 
-	def
+	def crear_robot(self):
+		self.robot = robot
+
+
+
+	def agregar_monedas(self):
+		
 		
