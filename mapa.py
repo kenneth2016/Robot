@@ -12,4 +12,7 @@ class Mapa(object):
 
 	def agregar_monedas(self):
 		
-		
+
+	def dibujar_mapa(self, ancho, alto):
+		for i in range(alto):
+			return " "*ancho

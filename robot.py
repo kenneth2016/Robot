@@ -1,4 +1,4 @@
-
+ 
 class Robot(object):
 	def __init__(self, direccion, x, y, fichas, mapa):
 		self.direccion = "^"
