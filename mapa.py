@@ -42,15 +42,8 @@ class Mapa(object):
         return resultado
 
     def quitar_moneda(self, x, y):
-    	indice_coincidencia = -1
-        for indice in range(len(self.monedas)):
-            moneda = self.monedas[indice]
-            if moneda.x == x and moneda.y == y:
-                indice_coincidencia = indice
-                break
-
-        if indice_coincidencia >= 0:
-            self.monedas.pop(indice_coincidencia)
-
-
-
+ 
+ 		if robot.x=x and robot.y=y:
+ 			self.x=-1
+ 			self.y=-1
+ 			
