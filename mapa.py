@@ -13,10 +13,9 @@ class Mapa(object):
 	def agregar_monedas(self, moneda):
 		self.monedas.append(moneda)
 
-
-
-	def contar_monedas_en(self, x, y):
-        contador = 0
+   
+    def contar_monedas_en(self, x, y):
+        contador= 0
 
         for moneda in self.monedas:
             if moneda.x == x and moneda.y == y:

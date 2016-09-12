@@ -42,12 +42,15 @@ class Robot(object):
 
 
 	def asingar_mapa(self, mapa):
-        self.mapa = mapa
+		self.mapa= mapa
 
-    def recoger(self):
-        if self.mapa.contar_monedas_en(self.x, self.y) > 0:
-            self.monedas += 1
-            self.mapa.quitar_moneda(x, y)
+	def recoger(self):
+		if self.mapa.contar_monedas_en(self.x, self.y) > 0:
+			self.monedas += 1
+			self.mapa.quitar_moneda(x, y)
+
+	def dibujar(self):
+		return rotate
 			
 
 

@@ -41,11 +41,14 @@ reglas= cargar_instrucciones("instrucciones/programa1.txt")
 for i in reglas:
 
 	if i == move:
-		robot.move
+		robot.move()
 
 	if i == rotate:
-		robot.rotate
+		robot.rotate()
 
 	if i == pick:
-		robot.recoger
+		robot.recoger()
+
+
+
 
