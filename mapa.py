@@ -13,8 +13,7 @@ class Mapa(object):
 	def agregar_monedas(self, moneda):
 		self.monedas.append(moneda)
 
-   
-    def contar_monedas_en(self, x, y):
+   	def contar_monedas_en(self, x, y):
         contador= 0
 
         for moneda in self.monedas:
@@ -32,7 +31,7 @@ class Mapa(object):
                     resultado += self.robot.rotar()
 
                 elif self.contar_monedas_en(x, y) > 0:
-                    resultado += self.contar_monedas_en(x, y)
+                    resultado += str(self.contar_monedas_en(x, y))
                 else:
                     resultado += " "
 

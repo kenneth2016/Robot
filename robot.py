@@ -14,13 +14,13 @@ class Robot(object):
 		if self.direccion==">":
 			self.x +=1
 
-		if self.direccion=="v":
+		elif self.direccion=="v":
 			self.y +=1
 
-		if self.direccion=="<":
+		elif self.direccion=="<":
 			self.x -=1
 
-		if self.direccion=="^":
+		elif self.direccion=="^":
 			self.y -=1
 
 
@@ -30,10 +30,10 @@ class Robot(object):
 		if self.direccion=="^":
 			self.direccion=">"
 
-		if self.direccion==">":
+		elif self.direccion==">":
 			self.direccion="v"
 
-		if self.direccion=="v":
+		elif self.direccion=="v":
 			self.direccion="<"
 
 		else:
@@ -50,7 +50,7 @@ class Robot(object):
 			self.mapa.quitar_moneda(x, y)
 
 	def dibujar(self):
-		return rotate
+		return self.direccion
 			
 
 
