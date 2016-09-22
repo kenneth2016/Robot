@@ -1,54 +1,40 @@
 from robot import Robot
-from moneda import Moneda
 from mapa import Mapa
-import time
+from moneda import Moneda
+from utilidades import cargar_mapa,cargar_instrucciones
+import time 
 
-mapa_completo= []
-def cargar_mapa(mapa):
 
-	f = open(mapa , "r")
 
-	for line in f:
-		mapa_completo.append(list (line.strip()))
+mi_mapa = cargar_mapa("mapas/mapa1.txt")
+reglas = cargar_instrucciones("instrucciones/programa1.txt")
 
-	return mapa_completo
-		
-mi_mapa= cargar_mapa("mapas/mapa1.txt")
+mapa=Mapa(25,80)
 
-for y in range(len(mi_mapa)):
-	fila = lista[y]
-	for x in range(len(mi_mapa)):
-		casilla= lista[x][y]
+
+for y  in range(len(mi_mapa)):
+	fila = mi_mapa[y]
+	for x in range (len(fila)):
+		casilla=mi_mapa[y][x]
 		if casilla == "*":
-			robot.colocar_en_mapa
-
-		if casilla== "0":
-			pass
-
-		if casilla > 0:
-			moneda=self.moneda
-
-
-def cargar_instrucciones(instrucciones):
-	
-	o = open(instrucciones, "r")
-	for regla in o:
-		ordenes.append(list(regla.split()))
-	return ordenes
-reglas= cargar_instrucciones("instrucciones/programa1.txt")
-
+			robot=Robot(x,y)
+			mapa.asignar_robot(robot)
+			robot.asignar_mapa(mapa)
+		else:
+			cantidad = int(casilla)
+			for i in range (cantidad):
+				moneda=Moneda(x,y)
+				mapa.agregar_moneda(moneda)
 
 for i in reglas:
-
-	if i == move:
-		robot.move()
-
-	if i == rotate:
-		robot.rotate()
-
-	if i == pick:
+	if i=='PICK':
 		robot.recoger()
+	if i=='MOVE':
+		robot.move()
+	if i=='ROTATE':
+		robot.rotate() 
+	print (mapa.dibujar())	
+	time.sleep(0.1)
 
 
-
-
+		
