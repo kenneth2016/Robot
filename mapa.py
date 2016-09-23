@@ -1,19 +1,19 @@
 class Mapa(object):
-	def __init__ (self, ancho, altura):
-		self.ancho=ancho
-		self.altura=altura
-		self.robot=None
-		sel.monedas=[]
+    def __init__ (self, altura, ancho):
+        self.ancho=ancho
+        self.altura=altura
+        self.robot=None
+        self.monedas=[]
 
-	def crear_robot(self):
-		self.robot = robot
+    def crear_robot(self):
+        self.robot = robot
 
 
 
-	def agregar_monedas(self, moneda):
-		self.monedas.append(moneda)
+    def agregar_monedas(self, moneda):
+        self.monedas.append(moneda)
 
-   	def contar_monedas_en(self, x, y):
+    def contar_monedas_en(self, x, y):
         contador= 0
 
         for moneda in self.monedas:
@@ -21,9 +21,9 @@ class Mapa(object):
                 contador += 1
 
         return contador
-
+    
     def dibujar_mapa(self):
-    	 resultado = ""
+        resultado = ""
 
         for y in range(self.altura):
             for x in range(self.ancho):
@@ -41,7 +41,7 @@ class Mapa(object):
 
     def quitar_moneda(self, x, y):
  
- 		if robot.x=x and robot.y=y:
- 			self.x=-1
- 			self.y=-1
- 			
+        if self.robot.x==x and self.robot.y==y:
+            self.x=-1
+            self.y=-1
+            
